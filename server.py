@@ -32,6 +32,12 @@ method = reqLine[0]
 url = reqLine[1]
 version = reqLine[2]
 
+#check if url exists and opens file if it does
+try:
+        openfile = open(pdf)
+        openfile.close()
+except IOError:
+        print("File not found or not accessible")
 
 print(message)
 conn.close()
